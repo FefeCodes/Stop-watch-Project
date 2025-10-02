@@ -4,23 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch App</title>
+
+    <!-- External CSS file for styling -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="main-container">
     <div class="container">
+      <!-- Page Title -->
       <h1>⏱ Stopwatch</h1>
-      <div id="display">00:00:00.00</div>
 
-      <div class="buttons">
-        <button id="startBtn">▶ Start</button>
-        <button id="stopBtn">⏸ Stop</button>
-        <button id="resetBtn">⏹ Reset</button>
-        <button id="lapBtn">Lap</button>
-        <button id="themeBtn"></button>
+      <!-- Stopwatch Display -->
+      <div id="timeDisplay">00:00:00.00</div>
+
+      <!-- Control Buttons -->
+      <div class="button-group">
+        <button id="startButton">▶ Start</button>
+        <button id="stopButton">⏸ Stop</button>
+        <button id="resetButton">⏹ Reset</button>
+        <button id="lapButton">📝 Lap</button>
+        <button id="themeToggleButton"></button>
+        <!-- Dark/Light mode toggle -->
       </div>
-      <ul id="laps"></ul>
+
+      <!-- List of Lap Times -->
+      <ul id="lapList"></ul>
     </div>
 
+    <!-- External JavaScript file for logic -->
     <script src="index.js"></script>
   </body>
 </html>
