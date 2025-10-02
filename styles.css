@@ -48,7 +48,7 @@ h1 {
 }
 
 /* Time Display */
-#display {
+#timeDisplay {
   font-size: 2rem;
   font-weight: bold;
   color: #0e1110;
@@ -82,22 +82,22 @@ button {
 }
 
 /* Individual Button Colors */
-#startBtn {
+#startButton {
   color: #28a745; /* Green for start */
 }
-#stopBtn {
+#stopButton {
   background: #dc3545; /* Red for stop */
   color: #fff;
 }
-#resetBtn {
+#resetButton {
   background: #ffcd35; /* Yellow for reset */
   color: #000;
 }
-#lapBtn {
+#lapButton {
   background: #59a9ff; /* Blue for lap */
   color: #000;
 }
-#themeBtn {
+#themeButton {
   background: #89a5b3;
   font-size: 1.5rem;
   padding: 10px 14px;
@@ -107,11 +107,11 @@ button {
 }
 
 /* Theme Button Variants */
-.main-container.light #themeBtn {
+.main-container.light #themeButton {
   background: #000;
   color: #fff;
 }
-.main-container.dark #themeBtn {
+.main-container.dark #themeButton {
   background: #fff;
   color: #000;
 }
@@ -123,14 +123,14 @@ button:hover {
 }
 
 /* Lap Section */
-#laps {
+#lapList {
   list-style: none;
   padding: 0;
   max-height: 200px;
   overflow-y: auto;
   margin: 0;
 }
-#laps li {
+#lapList li {
   background: rgba(0, 0, 0, 0.2);
   padding: 8px 12px;
   border-radius: 6px;
@@ -141,7 +141,7 @@ button:hover {
 
 /* Responsive Design */
 @media (max-width: 500px) {
-  #display {
+  #timeDisplay {
     font-size: 2rem;
     padding: 15px 25px;
   }

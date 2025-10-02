@@ -8,13 +8,13 @@ let timer = null; // stores setInterval reference
 let isRunning = false; // prevents multiple timers
 
 // DOM Elements
-const display = document.getElementById("display");
-const startBtn = document.getElementById("startBtn");
-const stopBtn = document.getElementById("stopBtn");
-const resetBtn = document.getElementById("resetBtn");
-const lapBtn = document.getElementById("lapBtn");
-const themeBtn = document.getElementById("themeBtn");
-const lapsList = document.getElementById("laps");
+const display = document.getElementById("timeDisplay");
+const startBtn = document.getElementById("startButton");
+const stopBtn = document.getElementById("stopButton");
+const resetBtn = document.getElementById("resetButton");
+const lapBtn = document.getElementById("lapButton");
+const themeBtn = document.getElementById("themeToggleButton");
+const lapsList = document.getElementById("lapList");
 
 // Format time values to always show 2 digits
 function formatTime(h, m, s, ms) {
@@ -93,7 +93,7 @@ function recordLap() {
  - Dark mode → 🌞 button (white background, black icon)
  - Light mode → 🌙 button (black background, white icon)
  */
-function toggleTheme() {
+function toggleThemeButton() {
   document.body.classList.toggle("dark");
   document.body.classList.toggle("light");
 
@@ -109,7 +109,7 @@ startBtn.addEventListener("click", startTimer);
 stopBtn.addEventListener("click", stopTimer);
 resetBtn.addEventListener("click", resetTimer);
 lapBtn.addEventListener("click", recordLap);
-themeBtn.addEventListener("click", toggleTheme);
+themeBtn.addEventListener("click", toggleThemeButton);
 
 // Default theme: Dark
 document.body.classList.add("dark");
