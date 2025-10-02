@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+.main-container.light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.main-container.light .container {
+  background: #fff;
+  color: #000;
+}
+
+.main-container.dark {
+  background: linear-gradient(135deg, #222, #555);
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: #555252;
+  transition: background 0.3s;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#display {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0e1110;
+  background: #cacaca;
+  padding: 20px 40px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  font-weight: medium;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#startBtn {
+  color: #28a745;
+}
+#stopBtn {
+  background: #dc3545;
+  color: #fff;
+}
+#resetBtn {
+  background: #ffcd35;
+  color: #000;
+}
+#lapBtn {
+  background: #59a9ff;
+  color: #000;
+}
+#themeBtn {
+  background: #89a5b3;
+  font-size: 1.5rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-container.light #themeBtn {
+  background: #000;
+  color: #fff;
+}
+
+.main-container.dark #themeBtn {
+  background: #fff;
+  color: #000;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+#laps {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 0;
+}
+
+#laps li {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  #display {
+    font-size: 2rem;
+    padding: 15px 25px;
+  }
+  button {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}
